@@ -1,38 +1,158 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  width: 80%;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  margin-top:41px;
+  width: 100%;
+}
+header img{
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+}
+header h1{
+  font-weight: 700;
+  font-size: 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.shareimage div{
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img{
+  margin: auto;
 }
+.img:hover img {
+ opacity: 0.2;
+}
+.img img {
+transition: linear .2s;}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.img:hover .camera{
+  opacity: 1;
+}
+.img img{
+  position: relative;
+  left: -5px;
+}
+.img .camera{
+position: relative;
+font-size: large;
+left:48px;
+opacity: 0;
+transition: linear .2s;
+z-index: 1;
+bottom: 16px;
+}
+.share{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #EAECF0;
+  padding: 2px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  right: 10rem;
+  color: rgb(72, 72, 72);
+  cursor: pointer;
+    transition: linear .2s;
+}
+.share:hover{
+  box-shadow: 0 0 5px rgba(74, 74, 74, 0.452);
+  color: #000;
+}
+.icons{
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+}
+.icons img{
+  margin: 10px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+section ul{
+  width: 80%;
+  margin: auto;
+}
+section ul li a {
+  color: #000 ;
+  text-decoration: none;
+  transition: linear .2s;
+}
+section ul li:hover a{
+  color: #ffff;
+}
+section ul li {
+  border: 1px solid #EAECF0;
+  list-style-type: none;
+  padding: 10px;
+  margin: 24px;
+  font-size: 16px;
+  color: rgba(16, 24, 40, 1);
+  font-weight: 500;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #EAECF0;
+  transition: linear .2s ;
+}
+section ul li:hover{
+  background-color: rgba(152, 162, 179, 1);
+}
+footer{
+  display: flex;
+  margin: auto;
+  padding: 32px;
+  margin-top: 35px;
+  border-top: 3px solid rgba(234, 236, 240, 1);
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+}
+footer h3{
+  font-size: 16px;
+  color:#667085;
+  font-family: 'Inter';
+}
+footer h1{
+  font-size: 23px;
+  font-family: serif;
+}
+footer h1 span{
+  font-size:2.2rem;
+  color: rgb(226, 64, 64);
+}
+footer img{
+  width: 110px;
+  height: 40px;
+  cursor:ns-resize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media(max-width:780px){
+  section ul {
+      width: 90%;
+      margin: auto;
+    }
+  .share {
+    right: 5rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+    footer {
+      display: block;
+      margin: auto;
+      margin-top: 35px;
+      padding: 20px;
+      align-items: center;
+      width: 90%;
+      justify-content: space-between;
+    }
+    footer img,footer h1 , footer h3{
+      padding-top:16px ;
+    }
 }
